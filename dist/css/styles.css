@@ -1,3 +1,98 @@
-h1 {
-  color: red;
+/* Variables
+====================================================================== */
+:root {
+  --background-color-light: #fafafa;
+  --green-color-dark: #28b485;
+  --green-color-dark-op80: rgba(40, 180, 133, 0.8);
+  --green-color-medium: #55c57a;
+  --green-color-light: #7ed561;
+  --green-color-light-op80: rgba(126, 213, 97, 0.8);
+  --gray-color-medium: #777;
+}
+
+
+
+/* Resets
+====================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* From project */
+  padding: 30px;
+  background-color: var(--background-color-light);
+  color: var(--gray-color-medium);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  /* From my own resets */
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+/* Global
+====================================================================== */
+
+
+
+/* Header
+====================================================================== */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+    var(--green-color-light-op80),
+    var(--green-color-dark-op80)),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: var(--background-color-light);
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 17.5px;
 }
