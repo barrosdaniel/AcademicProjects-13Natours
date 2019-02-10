@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass dist/sass/main.scss dist/css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrosdaniel/AcademicProjects-14Natours.git"
+  },
+  "author": "Daniel Barros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barrosdaniel/AcademicProjects-14Natours/issues"
+  },
+  "homepage": "https://github.com/barrosdaniel/AcademicProjects-14Natours#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
