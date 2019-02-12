@@ -134,12 +134,22 @@ ul {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn--white {
+  background-color: #fafafa;
+  color: #777;
+}
+
+.btn--white::after {
   background-color: #fafafa;
   color: #777;
 }
@@ -155,16 +165,6 @@ ul {
   border-radius: 10rem;
   z-index: -1;
   transition: 0.4s;
-}
-
-.btn--white::after {
-  background-color: #fafafa;
-  color: #777;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 @keyframes moveInBottom {
