@@ -4,7 +4,8 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed561;
 $color-primary-dark: #28b485;
 $color-text: #777;
-$color-box-shadow: rgba(0, 0, 0, 0.2);
+$color-black: #000;
+$color-box-shadow: rgba($color-black, 0.2);
 
 
 
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  /* From project */
+  // From project
   box-sizing: border-box;
   padding: 3rem;
   background-color: $color-background-light;
@@ -30,7 +31,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  /* From my own resets */
+  // From my own resets
   height: 100%;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
@@ -43,13 +44,12 @@ ul {
 
 
 
-/* Global
-====================================================================== */
+
+// Global ===============================================================
 
 
 
-/* Header
-====================================================================== */
+// Header ===============================================================
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom,
