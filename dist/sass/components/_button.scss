@@ -44,6 +44,17 @@
 
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-background-light;
+
+    &::after {
+      background-color: $color-primary;
+      color: $color-background-light;
+    }
+
+  }
+
   &::after {
     content: "";
     display: inline-block;
