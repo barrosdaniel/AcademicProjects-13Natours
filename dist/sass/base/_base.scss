@@ -7,8 +7,31 @@
 }
 
 html {
-  //1 rem setting
-  font-size: 62.5%;
+  //1 rem setting for the entire layout
+  font-size: 62.5%; //1rem = 10px; 10px/16px(browser standard) = 62.5%
+
+  @include responsive(desktop-large) {
+    //width > 1800px
+    font-size: 75%; //1rem = 12px; 12px/16px(browser standard) = 75%
+  }
+
+  @include responsive(tab-land) {
+    //width < 1200px
+    font-size: 56.25%; //1rem = 9px; 9px/16px(browser standard) = 56.25%
+  }
+
+  @include responsive(tab-port) {
+    //width < 900px
+    font-size: 50%; //1rem = 8px; 8px/16px(browser standard) = 50%
+  }
+
+  @include responsive(phone) {
+    //width < 600px
+    font-size: 37.5%; //1rem = 6px; 6px/16px(browser standard) = 37.5%
+  }
+
+
+
 }
 
 body {
