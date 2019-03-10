@@ -37,10 +37,14 @@ html {
 body {
   box-sizing: border-box;
   background-color: #fff;
+  padding: 3rem;
   height: 100%;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   overflow-x: hidden; }
+  @media screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 ul {
   list-style: none; }
@@ -74,7 +78,6 @@ ul {
     opacity: 1; } }
 
 body {
-  padding: 3rem;
   color: #666;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -93,12 +96,19 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out; }
+    @media screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.58rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -111,6 +121,12 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: 0.2s; }
+  @media screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }

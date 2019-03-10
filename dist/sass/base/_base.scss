@@ -37,11 +37,18 @@ html {
 body {
   box-sizing: border-box;
   background-color: $color-background-light;
+  padding: 3rem;
   // From my own resets
   height: 100%;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+  @include responsive(tab-port) {
+    //width < 900px
+    padding: 0;
+  }
+
 }
 
 ul {
