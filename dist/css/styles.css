@@ -463,6 +463,14 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   position: relative; }
+  @media screen and (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media screen and (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -470,7 +478,10 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); }
+    transform: translateX(-3rem) skewX(0); }
+    @media screen and (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -478,6 +489,9 @@ body {
     transition: 0.5s; }
   .story__text {
     transform: skewX(12deg); }
+    @media screen and (max-width: 56.25em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     color: #fff;
