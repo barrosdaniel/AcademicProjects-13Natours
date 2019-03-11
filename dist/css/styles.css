@@ -406,6 +406,9 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: 0.3s; }
+  @media screen and (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
   .feature-box__icon {
@@ -415,6 +418,9 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
+    @media screen and (max-width: 56.25em) {
+      .feature-box__icon {
+        margin-bottom: 0; } }
 
 .story {
   width: 75%;
@@ -884,7 +890,7 @@ body {
     transform: skewY(7deg); }
   @media screen and (max-width: 56.25em) {
     .features {
-      padding: 15rem 0; } }
+      padding: 10rem 0; } }
 
 .tours {
   margin-top: -12rem;
