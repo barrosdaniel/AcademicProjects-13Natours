@@ -655,6 +655,9 @@ body {
   .popup:target .popup__left {
     width: calc(100% / 3);
     display: table-cell; }
+    @media screen and (max-width: 75em) {
+      .popup:target .popup__left {
+        display: none; } }
   .popup__img {
     display: block;
     width: 100%; }

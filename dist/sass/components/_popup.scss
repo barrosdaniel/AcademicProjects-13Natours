@@ -58,6 +58,10 @@
   &:target &__left {
     width: calc(100% / 3);
     display: table-cell;
+
+    @include responsive(tab-land) {
+      display: none;
+    }
   }
 
   &__img {
