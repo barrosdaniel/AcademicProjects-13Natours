@@ -478,7 +478,7 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(0); }
+    transform: translateX(-3rem) skewX(12deg); }
     @media screen and (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0deg); } }
