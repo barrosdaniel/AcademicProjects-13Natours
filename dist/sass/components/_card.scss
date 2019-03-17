@@ -68,18 +68,36 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url(../img/nat-5.jpg);
-      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+      background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url(../img/nat-5-small.jpg);
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5-small.jpg);
+
+      @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+        background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url(../img/nat-5.jpg);
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+      }
     }
 
+
+
     &--2 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark)), url(../img/nat-6.jpg);
-      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+      background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark)), url(../img/nat-6-small.jpg);
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6-small.jpg);
+
+      @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+        background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark)), url(../img/nat-6.jpg);
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+      }
+
     }
 
     &--3 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark)), url(../img/nat-7.jpg);
-      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+      background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark)), url(../img/nat-7-small.jpg);
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7-small.jpg);
+
+      @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+        background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark)), url(../img/nat-7.jpg);
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+      }
     }
 
   }
@@ -191,21 +209,26 @@
     height: auto;
     border-radius: $border-radius;
     background-color: $color-background-light;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__side {
       height: auto;
       position: relative;
+      -webkit-box-shadow: none;
       box-shadow: none;
 
       &--back {
+        -webkit-transform: rotateY(0);
         transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
 
     }
 
     &:hover &__side--front {
+      -webkit-transform: rotateY(0);
       transform: rotateY(0);
     }
 
