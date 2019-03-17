@@ -7,6 +7,7 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
+  -webkit-transform: skewX(-12deg);
   transform: skewX(-12deg);
   position: relative;
 
@@ -14,9 +15,7 @@
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
-  }
-
-  @include responsive(phone) {
+    -webkit-transform: skewX(0);
     transform: skewX(0);
   }
 
@@ -24,28 +23,45 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+    -webkit-transform: translateX(-3rem) skewX(12deg);
     transform: translateX(-3rem) skewX(12deg);
+    overflow: hidden;
+    border-radius: 50%;
 
-    @include responsive(phone) {
+    @supports ((-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%))) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+
+    @include responsive(tab-port) {
+      -webkit-transform: translateX(-3rem) skewX(0deg);
       transform: translateX(-3rem) skewX(0deg);
     }
   }
 
   &__img {
     height: 100%;
+    -webkit-transform: translateX(-4rem) scale(1.4);
     transform: translateX(-4rem) scale(1.4);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+
   }
 
   &__text {
+    -webkit-transform: skewX(12deg);
     transform: skewX(12deg);
 
     @include responsive(tab-port) {
-      transform: skewX(0);
+      -webkit-transform: skewX(0deg);
+      transform: skewX(0deg);
     }
   }
 
@@ -54,22 +70,28 @@
     color: $color-background-light;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, 20%);
     transform: translate(-50%, 20%);
     text-transform: uppercase;
     text-align: center;
     font-size: 1.7rem;
     opacity: 0;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
   &:hover &__caption {
     opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
   &:hover &__img {
+    -webkit-transform: translateX(-4rem) scale(1);
     transform: translateX(-4rem) scale(1);
+    -webkit-filter: blur(3px) brightness(80%);
     filter: blur(3px) brightness(80%);
   }
 }

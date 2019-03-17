@@ -3,12 +3,14 @@
 *::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
   //1 rem setting for the entire layout
   font-size: 62.5%; //1rem = 10px; 10px/16px(browser standard) = 62.5%
+  scroll-behavior: smooth;
 
   @include responsive(desktop-large) {
     //width > 1800px
@@ -30,11 +32,10 @@ html {
     font-size: 37.5%; //1rem = 6px; 6px/16px(browser standard) = 37.5%
   }
 
-
-
 }
 
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: $color-background-light;
   padding: 3rem;

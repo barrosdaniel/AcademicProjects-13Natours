@@ -11,15 +11,23 @@
 .features {
   margin-top: -12rem;
   padding: 20rem 0;
+  background-image: -webkit-gradient(linear,
+    left top, right bottom,
+    from(rgba($color-primary-light, 0.8)),
+    to(rgba($color-primary-dark, 0.8))),
+    url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom,
     rgba($color-primary-light, 0.8),
     rgba($color-primary-dark, 0.8)),
     url(../img/nat-4.jpg);
   background-size: cover;
 
+  -webkit-transform: skewY(-7deg);
+
   transform: skewY(-7deg);
 
   &>* {
+    -webkit-transform: skewY(7deg);
     transform: skewY(7deg);
   }
 
@@ -50,6 +58,9 @@
 
 .booking {
   padding: 15rem 0;
+  background-image: -webkit-gradient(linear,
+    left top, right bottom,
+    from($color-primary-light), to($color-primary-dark));
   background-image: linear-gradient(to right bottom,
     $color-primary-light, $color-primary-dark)
 }
@@ -59,6 +70,7 @@
     url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: $border-radius;
+  -webkit-box-shadow: 0 1.5rem 4rem ($color-box-shadow);
   box-shadow: 0 1.5rem 4rem ($color-box-shadow);
 
   @include responsive(tab-land) {
@@ -68,6 +80,8 @@
   }
 
   @include responsive(tab-port) {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba($color-background-light, 0.9)), to(rgba($color-background-light, 0.9))),
+      url(../img/nat-10.jpg);
     background-image: linear-gradient(to right, rgba($color-background-light, 0.9) 0%, rgba($color-background-light, 0.9) 100%),
       url(../img/nat-10.jpg);
   }

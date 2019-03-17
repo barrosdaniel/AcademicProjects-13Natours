@@ -9,6 +9,7 @@
     font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
+    -webkit-transition: 0.2s;
     transition: 0.2s;
     position: relative;
 
@@ -18,15 +19,20 @@
   }
 
   &--animated {
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
     animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
   }
 
   &:hover {
+    -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem $color-box-shadow;
     box-shadow: 0 1rem 2rem $color-box-shadow;
 
     &::after {
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
@@ -35,7 +41,9 @@
 
   &:active,
   &:focus {
+    -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
+    -webkit-box-shadow: 0 .5rem 1rem $color-box-shadow;
     box-shadow: 0 .5rem 1rem $color-box-shadow;
     outline: none;
   }
@@ -72,6 +80,7 @@
     left: 0;
     border-radius: 10rem;
     z-index: -1;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
   }
 
@@ -92,12 +101,16 @@
   &:hover {
     background-color: $color-primary;
     color: $color-grey-light-1;
+    -webkit-box-shadow: 0 1rem 2rem $color-box-shadow;
     box-shadow: 0 1rem 2rem $color-box-shadow;
+    -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 
   &:active {
+    -webkit-box-shadow: 0 0.5rem 1rem $color-box-shadow;
     box-shadow: 0 0.5rem 1rem $color-box-shadow;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
