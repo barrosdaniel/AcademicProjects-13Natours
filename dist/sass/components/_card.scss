@@ -198,7 +198,8 @@
     margin-bottom: 8rem;
   }
 
-  @include responsive(tab-port) {
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover:none) {
     height: auto;
     border-radius: $border-radius;
     background-color: $color-background-light;
