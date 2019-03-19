@@ -52,6 +52,10 @@ body {
 ul {
   list-style: none; }
 
+::selection {
+  color: #fff;
+  background-color: #55c57a; }
+
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;

@@ -55,3 +55,8 @@ body {
 ul {
   list-style: none;
 }
+
+::selection {
+  color: $color-background-light;
+  background-color: $color-primary;
+}
