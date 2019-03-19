@@ -1,0 +1,97 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-background-light, 0.6);
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  -webkit-transform: skewX(-12deg);
+  transform: skewX(-12deg);
+  position: relative;
+
+  @include responsive(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+    -webkit-transform: skewX(0);
+    transform: skewX(0);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg);
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports ((-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%))) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+
+    @include responsive(tab-port) {
+      -webkit-transform: translateX(-3rem) skewX(0deg);
+      transform: translateX(-3rem) skewX(0deg);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    -webkit-transform: translateX(-4rem) scale(1.4);
+    transform: translateX(-4rem) scale(1.4);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+  }
+
+  &__text {
+    -webkit-transform: skewX(12deg);
+    transform: skewX(12deg);
+
+    @include responsive(tab-port) {
+      -webkit-transform: skewX(0deg);
+      transform: skewX(0deg);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    color: $color-background-light;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 20%);
+    transform: translate(-50%, 20%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    -webkit-transform: translateX(-4rem) scale(1);
+    transform: translateX(-4rem) scale(1);
+    -webkit-filter: blur(3px) brightness(80%);
+    filter: blur(3px) brightness(80%);
+  }
+}
