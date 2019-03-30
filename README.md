@@ -1,10 +1,10 @@
-# AcademicProjects-13Natours
+# AcademicProjects-14Natours
 
 Small academic project I completed in March 2019 as part of the 'Advanced CSS and Sass' course.
 
 Front-end features implemented. Design by Jonas Schmedtmann.
 
-Visit the [website](https://www.danielbarros.website/natours/). Currently hosted with bluehost.
+Visit the [website](https://www.danielbarros.website/natours/). Currently hosted with [bluehost](https://www.bluehost.com/).
 
 ## Technologies Used
 * HTML5;
